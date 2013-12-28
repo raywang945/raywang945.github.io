@@ -1,0 +1,42 @@
+body {
+	padding-top: 70px;
+}
+
+a[class^=myNav-] {
+	cursor: pointer;
+}
+
+#wrap {
+	min-height: 100%;
+}
+
+#main {
+	overflow: auto;
+	padding-bottom: 44px;
+}
+
+body .footer {
+	position: relative;
+	height: 44px;
+	padding: 12px 0;
+	margin-top: -44px;
+	clear: both;
+	text-align: center;
+}
+
+#navbar-brand {
+	color: white;
+}
+
+td:first-child {
+	width: 150px;
+}
+
+p.text-right {
+	margin-top: -20px;
+	margin-bottom: 0;
+}
+
+img.myBorder {
+	border: solid #8A6D3B 1px;
+}

@@ -1,0 +1,73 @@
+body {
+	margin-top: 40px;
+}
+
+#tagList_div li.checked label {
+	color: white;
+	background-color: rgb(185, 74, 72);
+}
+
+ul[id^="category-"], ul[id^="whole-"] {
+	width: 400px;
+}
+
+ul[id^="category-"] li, ul[id^="whole-"] li {
+	padding-left: 5px;
+}
+
+#tagTab {
+	margin-bottom: 10px;
+}
+
+#tagTab li {
+	cursor: pointer;
+}
+
+div.checkbox {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+li.list-group-item {
+	padding: 0;
+}
+
+#done_button {
+	padding: 0px 5px;
+	margin-left: 10px;
+}
+
+.jp-playlist li.done_clip {
+	background-color: rgb(92, 184, 92);
+}
+
+#lastfm_artist img {
+	width: 55px;
+	border-radius: 5px;
+}
+
+#lastfm_songname img {
+	width: 55px;
+	border-radius: 5px;
+}
+
+#copy_select {
+	display: inline;
+	width: inherit;
+	min-width: 81px;
+}
+
+#seg_remind_list, #whole_remind_list {
+	padding: 0;
+	margin: 0 0 10px 25px;
+}
+
+#whole_song {
+	width: 100%;
+	min-width: 200px;
+}
+
+#previous_song_button, #next_song_button {
+	padding: 0px 5px;
+	cursor: pointer;
+}

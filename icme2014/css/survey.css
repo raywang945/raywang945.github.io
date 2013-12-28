@@ -1,0 +1,24 @@
+dt, label {
+	font-weight: normal;
+}
+
+dd {
+	margin-bottom: 20px;
+}
+
+dd label {
+	margin-right: 20px;
+}
+
+dd label:last-child {
+	margin-right: 0;
+}
+
+input[type="radio"] {
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+label:hover {
+	cursor: pointer;
+}

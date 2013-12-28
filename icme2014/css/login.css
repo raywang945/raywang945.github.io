@@ -1,0 +1,13 @@
+body {
+	padding-top: 40px;
+	background-color: #eee;
+}
+
+a {
+	cursor: pointer;
+}
+
+.form-signin {
+	margin: 0 auto;
+	max-width: 330px;
+}

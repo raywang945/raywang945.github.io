@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/introduction.css">
+	<style>
+		body {
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 class="text-center">Short-Time Music Tag Annotation</h1>
+		<p class="lead">This task is held by <a href="http://mac.citi.sinica.edu.tw/" target="_blank">MAC Lab @ Academia Sinica</a>. If you have any question, please contact <a href="mailto:raywang945@gmail.com">Shuo-Yang Wang</a>.</p>
+		<p class="text-warning"><strong>You must be at least 18 years old to participate in this task.</strong></p>
+	
+		<h3>Technical Requirements</h3>
+		<ul>
+			<li>This site works in Firefox 10+, Chrome 17+, Safari 5+, or Internet Explorer 10+.</li>
+			<li>Please allow Javascript on this site.</li>
+			<li>Please maximize your browser window.</li>
+			<li>This task requires to listen to music, so please make sure you can play and hear the sound. A headphone is recommended for better acoustic quality.</li>
+		</ul>
+
+		<h3>Instructions</h3>
+		<p>This is a <strong>music tag labeling</strong> task. There are 500 songs in the database. For each song, you are requested to in turn listen to at most 10 representative <strong>short-time</strong> segments (each is 5~15 second) of a song and label the tags of each segment.</p> 
+		<p>Please note the following rules:</p>
+		<ul>
+			<li>The musical events may vary within the segment. Please identify the <strong>explicit concepts in terms of the listed tags</strong> according to the <strong>major middle (e.g. 70%) part</strong> of a segment. For example, if a segment is 6 second long, and the vocal unfolds from the 5-th second, this segment may not have to be labeled with vocal related tags, such as Instrument_-_Male_Lead_Vocals-Solo, Instrument_-_Backing_vocals, and Vocals-Emotional.</li>
+			<li>Please consider each segment <strong>independently</strong>. When listening to a specific segment, there is no need to take the other segments into account.</li>
+			<li>It is OK to take <strong>lyrics</strong> into account. For example, lyrics may play an important role when labeling emotion related tags.</li>
+		</ul>
+	
+		<h3>What are the tags</h3>
+		<p>There are totally 144 tags spanning eight categories. For each segment, please annotate the relevant tags .</p>
+		<dl class="dl-horizontal">
+			<dt>Instrument (multiple)</dt>
+			<dd>Identify the instruments or the sounds that occur in the <strong>major (middle)</strong> part of the segment.</dd>
+			<dt>Instrument-Solo (single)</dt>
+			<dd>Recognize the solo instrument or sound in the segment. You may not need to select tags from this category if all the instruments are playing the background music. Only one tag in this category can be selected.</dd>				
+			<dt>Vocals (multiple)</dt>
+			<dd>If the segment is considered having vocals in the major middle part, please determine the vocal characteristics of the singer. Otherwise, uncheck all the tags that belong to this category.</dd>
+			<dt>Song (multiple)</dt>
+			<dd>Identify the song concepts related to the acoustic qualities of the song, artist and recording.</dd>								
+			<dt>Genre (multiple)</dt>
+			<dd>Determine the genres performed in the music. A segment can belong to multiple genres in this category. Althought musical genres is usually consistent across the song, we recommend to discover the variation of playing styles from segment to segment.</dd>
+			<dt>Genre-Best (single)</dt>
+			<dd>Select a specific genre from this category that best describes the segment. In other word, only the best genere can be chosen for a segment. We suggest to determine the global genre that best summarizes the song that the segment belongs to.</dd>
+			<dt>Emotion (multiple)</dt>
+			<dd>Identify your perceived emotion, feeling, or mood of the segment.</dd>
+			<dt>Usage (multiple)</dt>
+			<dd>Suggest the contexts that the segment is suitable for. Because usage tags are more global, the selected tags are supposed to be relevant to the song that the segment belongs to.</dd>
+		</dl>
+				
+		<div class="row">
+			<div class="col-md-6">	
+				<h3>How to label the tags</h3>
+				<p>The figure on the righthand side demonstrates an example of the tag selection user interface. Each tag has a <strong>checkbox</strong> showing whether the tag is selected or not. To facilitate the labeling task, in each category our system will rank a list of tags and suggest some relevant tags (initially checked) in the list according the <strong>estimated associations</strong> between the tags and the segment. However, the suggested tags might be wrong, and the system could also miss some tags that are actually relevant to the segment. Given the machine suggested tags, you have to manully <strong>check</strong> or <strong>uncheck</strong> tags in the list according to what you have acoustically perceived.</p>
+				<p>When annotating, please note:</p>
+				<ul>
+					<li>Onece you have finished listening to a segment, the segment block will become green. You are then allowed to click "done" and submit the result of the segment.</li>
+					<li>You can retrospect and modify the tag checkboxes by clicking on previous segments.</li>
+					<li>Once you complete and qualify the above constraints, you are allowed to submit the results of the song.</li>
+				</ul>
+			</div>
+			<div class="col-md-6">
+				<img class="img-responsive" src="../supplement/intro.png">
+			</div>
+		</div>
+
+		<a class="btn btn-primary btn-lg" href="sound_test.html">Continue</a>
+	
+		<div class="text-center">
+			<span>Page 1 / 5</span>
+		</div>
+	</div>
+
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="../js/myUtil.js"></script>
+</body>
+</html>

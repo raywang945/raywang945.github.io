@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../skin/jplayer.blue.monday.css">
+	<link rel="stylesheet" href="../css/experiment.css">
+	<style>
+		body {
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<table class="table table-condensed">
+					<tr>
+						<td>Done</td>
+						<td><span class="text-muted" id="done_num"></span></td>
+					</tr>
+					<tr>
+						<td>Song ID</td>
+						<td>
+							<span class="text-muted" id="song_id"></span>
+							<span class="pull-right">
+								<button id="previous_song_button" class="btn btn-success btn-sm" onclick="previousSong();"><span class="glyphicon glyphicon-circle-arrow-left"></span> previous</button>
+								<button id="next_song_button" class="btn btn-success btn-sm" onclick="nextSong();">next <span class="glyphicon glyphicon-circle-arrow-right"></span></button>
+							</span>
+						</td>
+					</tr>
+					<tr>
+						<td>Artist</td>
+						<td>
+							<span class="text-muted" id="artist"></span>
+							<a id="lastfm_artist" target="_blank"><img class="pull-right" src="../supplement/lastfm.jpg"></a>
+						</td>
+					</tr>
+					<tr>
+						<td>Song name</td>
+						<td>
+							<span class="text-muted" id="song_name"></span>
+							<a id="lastfm_songname" target="_blank"><img class="pull-right" src="../supplement/lastfm.jpg"></a>
+						</td>
+					</tr>
+					<tr>
+						<td>Play whole song</td>
+						<td>
+							<audio id="whole_song" controls oncontextmenu="return false;" preload="auto">Audio could not be loaded.</audio>
+						</td>
+					</tr>
+				</table>
+				<div id="jquery_jplayer_N" class="jp-jplayer"></div>
+				<div id="jp_container_N" class="jp-audio" style="width: 100%;">
+					<div class="jp-type-playlist">
+						<div class="jp-gui jp-interface">
+							<ul class="jp-controls">
+								<li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
+								<li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
+							</ul>
+							<div class="jp-progress" style="left: 21%; width: 75%;">
+								<div class="jp-play-bar"></div>
+							</div>
+							<div class="jp-time-holder" style="left: 21%; width: 75%;">
+								<div class="jp-current-time"></div>
+								<div class="jp-duration"></div>
+								<ul class="jp-toggles" style="left: 35%; top: 0;">
+									<li><a href="javascript:;" class="jp-repeat" tabindex="1" title="repeat">repeat</a></li>
+									<li><a href="javascript:;" class="jp-repeat-off" tabindex="1" title="repeat off">repeat off</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="jp-playlist">
+							<ul>
+								<li></li>
+							</ul>
+						</div>
+						<div class="jp-no-solution">
+							<span>Update Required</span>
+							To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+						</div>
+					</div>
+				</div>
+	
+				<ul id="seg_remind_list">
+					<li>You can enable the <strong>repeat</strong> function to listen to a segment multiple times.</li>
+					<li>You can <strong>copy</strong> the tag labels of a done segment to accelerate the labeling process.
+						To get the default tag labels, you can click <strong>undo</strong>.</li>
+					<li>You can retrospect and modify the tag labels of a done segment by clicking the segment and listening to it again.</li>
+				</ul>
+				<ul id="whole_remind_list">
+					<li>You can operate the above audio player to listen to the whole music.</li>
+				</ul>
+			</div>
+			<div id="tagList_div" class="col-md-8">
+				<p id="support_text">
+					Copy the tag labels of <select id="copy_select" class="form-control input-sm"></select> 
+					<button id="copy_button" class="btn btn-success btn-sm" onclick="copyTag();">Copy</button> or
+					<button id="reset_button" class="btn btn-warning btn-sm" onclick="resetTag();">Undo</button>
+				</p>
+				<ul id="tagTab" class="nav nav-pills">
+					<li class="category_nav" onclick="showTags(this)"><a>Instrument</a></li>
+					<li class="category_nav" onclick="showTags(this)"><a>Instrument-Solo</a></li>				
+					<li class="category_nav" onclick="showTags(this)"><a>Vocals</a></li>
+					<li class="category_nav" onclick="showTags(this)"><a>Emotion</a></li>
+	
+					<li class="whole_nav" onclick="showTags(this)"><a>Song</a></li>
+					<li class="whole_nav" onclick="showTags(this)"><a>Genre</a></li>
+					<li class="whole_nav" onclick="showTags(this)"><a>Genre-Best</a></li>
+					<li class="whole_nav" onclick="showTags(this)"><a>Usage</a></li>
+				</ul>
+				<ul id="category-Instrument" class="list-group hide"></ul>
+				<ul id="category-Instrument-Solo" class="list-group hide"></ul>
+				<ul id="category-Vocals" class="list-group hide"></ul>
+				<ul id="category-Emotion" class="list-group hide"></ul>
+	
+				<ul id="whole-Song" class="list-group hide"></ul>
+				<ul id="whole-Genre" class="list-group hide"></ul>
+				<ul id="whole-Genre-Best" class="list-group hide"></ul>
+				<ul id="whole-Usage" class="list-group hide"></ul>
+			</div>
+		</div>
+	
+		<button id="continue_button" class="btn btn-primary btn-lg" onclick="myContinue();">Continue</button>
+		<button id="submit_button" class="btn btn-primary btn-lg" onclick="mySubmit();">Next Song</button>
+	
+		<div id="page_index" class="text-center">
+			<span>Page 4 / 5</span>
+		</div>
+	</div>
+
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="../js/myUtil.js"></script>
+	<script src="../js/jquery.jplayer.min.js"></script>
+	<script src="../js/jplayer.playlist.min.js"></script>
+	<script charset="utf-8" src="../js/preload.js"></script>
+	<script charset="utf-8" src="../js/experiment.js"></script>
+</body>
+</html>

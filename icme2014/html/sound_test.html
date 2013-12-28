@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+	<style>
+		body {
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 class="text-center">Music Emotion Annotation</h1>
+		<h4>Sound test</h4>
+		<p>To ensure that your audio works properly, you must complete the following sound test. Click on the button below to play a word, and type the word in the box provided. After doing so, press the Continue button to proceed. If you enter the word incorrectly, you will be prompted to retry until you have entered it correctly.</p>
+		<audio controls="controls" oncontextmenu="return false;" preload="auto" src="../supplement/english.mp3">Audio could not be loaded.</audio>
+		<br>
+		<br>
+		<div class="row">
+			<div class="col-lg-3">
+				<input class="form-control" id="check_input" type="text">
+			</div>
+		</div>
+		<br>
+	
+		<button class="btn btn-primary btn-lg" onclick="checkSubmit()">Continue</button>
+	
+		<div class="text-center">
+			<span>Page 2 / 5</span>
+		</div>
+	</div>
+
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="../js/myUtil.js"></script>
+	<script charset="utf-8" src="../js/sound_test.js"></script>
+</body>
+</html>

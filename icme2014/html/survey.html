@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/survey.css">
+	<style>
+		body {
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 class="text-center">Music Emotion Annotation</h1>
+		<h3>Short Survey</h3>
+		<p class="lead text-warning">Please answer all the questions.</p>
+	
+		<form role="form">
+			<h4>Demographic information</h4>
+			<dl class="dl-horizontal">
+				<dt>Gender</dt>
+				<dd>
+					<label style="margin-right: 20px;"><input type="radio" name="gender" value="male">Male</label>
+					<label><input type="radio" name="gender" value="female">Female</label>
+				</dd>
+				<dt>Age</dt>
+				<dd>
+					<input class="form-control" type="number" name="age" min="18" max="99" placeholder="Your age" style="width: 200px;">
+				</dd>
+			</dl>
+	
+			<h4>Your music experience</h4>
+			<dl class="dl-horizontal">
+				<dt>Music education</dt>
+				<dd>
+					<label><input type="radio" name="education" value="education-1">No</label>
+					<label><input type="radio" name="education" value="education-2">&lt 1 year</label>
+					<label><input type="radio" name="education" value="education-3">1-3 years</label>
+					<label><input type="radio" name="education" value="education-4">3-5 years</label>
+					<label><input type="radio" name="education" value="education-5">&gt 5 years</label>
+				</dd>
+				<dt>Music listening</dt>
+				<dd>
+					How many hours do you listen to music in a day?<br>
+					<label><input type="radio" name="listening" value="listening-1">No</label>
+					<label><input type="radio" name="listening" value="listening-2">0-2 hours</label>
+					<label><input type="radio" name="listening" value="listening-3">2-4 hours</label>
+					<label><input type="radio" name="listening" value="listening-4">4-6 hours</label>
+					<label><input type="radio" name="listening" value="listening-5">&gt 6 hours</label>
+				</dd>
+			</dl>
+	
+			<h4>Your preferences of music genres</h4>
+			<dl class="dl-horizontal">
+				<dt></dt>
+				<dd style="margin-bottom: 0;">
+					<p class="text-info" style="margin-bottom: 0;">Least -----------------------------------> Most</p>
+				</dd>
+				<dt>Rock</dt>
+				<dd>
+					<label><input type="radio" name="genre_rock" value="genre_rock-1">1</label>
+					<label><input type="radio" name="genre_rock" value="genre_rock-2">2</label>
+					<label><input type="radio" name="genre_rock" value="genre_rock-3">3</label>
+					<label><input type="radio" name="genre_rock" value="genre_rock-4">4</label>
+					<label><input type="radio" name="genre_rock" value="genre_rock-5">5</label>
+				</dd>
+				<dt>Metal</dt>
+				<dd>
+					<label><input type="radio" name="genre_metal" value="genre_metal-1">1</label>
+					<label><input type="radio" name="genre_metal" value="genre_metal-2">2</label>
+					<label><input type="radio" name="genre_metal" value="genre_metal-3">3</label>
+					<label><input type="radio" name="genre_metal" value="genre_metal-4">4</label>
+					<label><input type="radio" name="genre_metal" value="genre_metal-5">5</label>
+				</dd>
+				<dt>Country</dt>
+				<dd>
+					<label><input type="radio" name="genre_country" value="genre_country-1">1</label>
+					<label><input type="radio" name="genre_country" value="genre_country-2">2</label>
+					<label><input type="radio" name="genre_country" value="genre_country-3">3</label>
+					<label><input type="radio" name="genre_country" value="genre_country-4">4</label>
+					<label><input type="radio" name="genre_country" value="genre_country-5">5</label>
+				</dd>
+				<dt>Jazz</dt>
+				<dd>
+					<label><input type="radio" name="genre_jazz" value="genre_jazz-1">1</label>
+					<label><input type="radio" name="genre_jazz" value="genre_jazz-2">2</label>
+					<label><input type="radio" name="genre_jazz" value="genre_jazz-3">3</label>
+					<label><input type="radio" name="genre_jazz" value="genre_jazz-4">4</label>
+					<label><input type="radio" name="genre_jazz" value="genre_jazz-5">5</label>
+				</dd>
+				<dt>Pop</dt>
+				<dd>
+					<label><input type="radio" name="genre_pop" value="genre_pop-1">1</label>
+					<label><input type="radio" name="genre_pop" value="genre_pop-2">2</label>
+					<label><input type="radio" name="genre_pop" value="genre_pop-3">3</label>
+					<label><input type="radio" name="genre_pop" value="genre_pop-4">4</label>
+					<label><input type="radio" name="genre_pop" value="genre_pop-5">5</label>
+				</dd>
+				<dt>Classical</dt>
+				<dd>
+					<label><input type="radio" name="genre_classical" value="genre_classical-1">1</label>
+					<label><input type="radio" name="genre_classical" value="genre_classical-2">2</label>
+					<label><input type="radio" name="genre_classical" value="genre_classical-3">3</label>
+					<label><input type="radio" name="genre_classical" value="genre_classical-4">4</label>
+					<label><input type="radio" name="genre_classical" value="genre_classical-5">5</label>
+				</dd>
+				<dt>Blues</dt>
+				<dd>
+					<label><input type="radio" name="genre_blues" value="genre_blues-1">1</label>
+					<label><input type="radio" name="genre_blues" value="genre_blues-2">2</label>
+					<label><input type="radio" name="genre_blues" value="genre_blues-3">3</label>
+					<label><input type="radio" name="genre_blues" value="genre_blues-4">4</label>
+					<label><input type="radio" name="genre_blues" value="genre_blues-5">5</label>
+				</dd>
+				<dt>Hip-hop</dt>
+				<dd>
+					<label><input type="radio" name="genre_hiphop" value="genre_hiphop-1">1</label>
+					<label><input type="radio" name="genre_hiphop" value="genre_hiphop-2">2</label>
+					<label><input type="radio" name="genre_hiphop" value="genre_hiphop-3">3</label>
+					<label><input type="radio" name="genre_hiphop" value="genre_hiphop-4">4</label>
+					<label><input type="radio" name="genre_hiphop" value="genre_hiphop-5">5</label>
+				</dd>
+				<dt>Electronic</dt>
+				<dd>
+					<label><input type="radio" name="genre_electronic" value="genre_electronic-1">1</label>
+					<label><input type="radio" name="genre_electronic" value="genre_electronic-2">2</label>
+					<label><input type="radio" name="genre_electronic" value="genre_electronic-3">3</label>
+					<label><input type="radio" name="genre_electronic" value="genre_electronic-4">4</label>
+					<label><input type="radio" name="genre_electronic" value="genre_electronic-5">5</label>
+				</dd>
+				<dt>Raggae</dt>
+				<dd>
+					<label><input type="radio" name="genre_raggae" value="genre_raggae-1">1</label>
+					<label><input type="radio" name="genre_raggae" value="genre_raggae-2">2</label>
+					<label><input type="radio" name="genre_raggae" value="genre_raggae-3">3</label>
+					<label><input type="radio" name="genre_raggae" value="genre_raggae-4">4</label>
+					<label><input type="radio" name="genre_raggae" value="genre_raggae-5">5</label>
+				</dd>
+				<dt>Dance</dt>
+				<dd>
+					<label><input type="radio" name="genre_dance" value="genre_dance-1">1</label>
+					<label><input type="radio" name="genre_dance" value="genre_dance-2">2</label>
+					<label><input type="radio" name="genre_dance" value="genre_dance-3">3</label>
+					<label><input type="radio" name="genre_dance" value="genre_dance-4">4</label>
+					<label><input type="radio" name="genre_dance" value="genre_dance-5">5</label>
+				</dd>
+			</dl>
+		</form>
+
+		<button class="btn btn-primary btn-lg" onclick="checkSubmit()">Continue</button>
+		or <a class="btn btn-danger btn-sm" href="experiment.html">Skip</a>
+
+		<div class="text-center">
+			<span>Page 3 / 5</span>
+		</div>
+	</div>
+
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="../js/myUtil.js"></script>
+	<script charset="utf-8" src="../js/survey.js"></script>
+</body>
+</html>
